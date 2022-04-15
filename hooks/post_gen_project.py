@@ -26,13 +26,13 @@ from urllib.request import urlopen
 github_url = "https://api.github.com/repos"
 
 dependencies = [
-    {
-        "definition": {
-            "repo_url": f"{github_url}/meatballs/anvil-navigation",
-            "files": [Path("client_code", "navigation.py")],
-        },
-        "include": "yes",
-    },
+    # {
+    #     "definition": {
+    #         "repo_url": f"{github_url}/meatballs/anvil-navigation",
+    #         "files": [Path("client_code", "navigation.py")],
+    #     },
+    #     "include": "yes",
+    # },
     {
         "definition": {
             "repo_url": f"{github_url}/s-cork/HashRouting",
