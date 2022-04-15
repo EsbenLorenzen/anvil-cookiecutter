@@ -23,37 +23,37 @@ from pathlib import Path
 from typing import List, Union
 from urllib.request import urlopen
 
-github_url = "https://api.github.com/repos"
 
+github_url = "https://api.github.com/repos"
 dependencies = [
-    # {
-    #     "definition": {
-    #         "repo_url": f"{github_url}/meatballs/anvil-navigation",
-    #         "files": [Path("client_code", "navigation.py")],
-    #     },
-    #     "include": "yes",
-    # },
     {
         "definition": {
-            "repo_url": f"{github_url}/s-cork/HashRouting",
+            "repo_url": f"{github_url}/anvilistas/anvil-extras",
+            "files": [Path("client_code", "routing", "_navigation.py")],
+        },
+        "include": "yes",
+    },
+    {
+        "definition": {
+            "repo_url": f"{github_url}/anvilistas/anvil-extras",
             "files": [
-                Path("client_code", "routing.py"),
-                Path("client_code", "_logging.py"),
+                Path("client_code", "routing", "_routing.py"),
+                Path("client_code", "routing", "_logging.py"),
             ],
         },
         "include": "{{cookiecutter.with_hash_routing}}",
     },
     {
         "definition": {
-            "repo_url": f"{github_url}/meatballs/anvil-authorisation",
+            "repo_url": f"{github_url}/anvilistas/anvil-extras",
             "files": [Path("server_code", "authorisation.py")],
         },
         "include": "{{cookiecutter.with_authorisation}}",
     },
     {
         "definition": {
-            "repo_url": f"{github_url}/meatballs/anvil-events",
-            "files": [Path("client_code", "events.py")],
+            "repo_url": f"{github_url}/anvilistas/anvil-extras",
+            "files": [Path("client_code", "messaging.py")],
         },
         "include": "{{cookiecutter.with_events}}",
     },
